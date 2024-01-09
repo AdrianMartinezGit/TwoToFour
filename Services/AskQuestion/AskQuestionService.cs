@@ -2,15 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.ObjectPool;
 
 namespace TwoToFour.Services.AskQuestion;
 
 public class AskQuestionService : IAskQuestionService
 {
+    string chosenName = "Aaron";
+    string chosenTime = "8:00 in the morning.";
+
     public string AskFirstQuestion(string firstQuestion)
     {
         if (firstQuestion == "what is your name?") {
-            return "My name is Aaron";
+            return $"My name is {chosenName}";
         } else {
             return "I'm sorry, I don't understand that. Try Again.";
         }
@@ -19,7 +23,7 @@ public class AskQuestionService : IAskQuestionService
     public string AskSecondQuestion(string secondQuestion)
     {
         if (secondQuestion == "what time did you wake up?") {
-            return "I woke up at around 8:00 in the morning.";
+            return $"I woke up at around {chosenTime}";
         } else {
             return "I'm sorry, I don't understand that. Try Again.";
         }

@@ -16,14 +16,14 @@ public class AskQuestionController : ControllerBase
     }
 
     [HttpPost]
-    [Route("AskingQuestions/{firstQuestion}")]
+    [Route("AskFirstQuestion/{firstQuestion}")]
     public string AskFirstQuestion(string firstQuestion)
     {
         return _askQuestionService.AskFirstQuestion(firstQuestion);
     }
 
     [HttpPost]
-    [Route("AskingQuestions/{secondQuestion}")]
+    [Route("AskSecondQuestion/{secondQuestion}")]
     public string AskSecondQuestion(string secondQuestion)
     {
         return _askQuestionService.AskSecondQuestion(secondQuestion);

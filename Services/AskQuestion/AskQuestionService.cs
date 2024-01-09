@@ -12,7 +12,7 @@ public class AskQuestionService : IAskQuestionService
         // } else {
         //     return "I'm sorry, I don't understand that. Try Again.";
         // }
-        
+        return $"What is your name?\nMy Name is {firstQuestion}";
     }
 
     public string AskSecondQuestion(string secondQuestion)
@@ -22,5 +22,7 @@ public class AskQuestionService : IAskQuestionService
         // } else {
         //     return "I'm sorry, I don't understand that. Try Again.";
         // }
+
+        return $"What time did you wake up?\nI woke up at around {secondQuestion}";
     }
 }

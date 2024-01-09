@@ -15,7 +15,7 @@ public class TwoNumberController : ControllerBase
         _twoNumberService = twoNumberService;
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("AddTwoNumbers/{firstNumber}/{secondNumber}")]
     public string AddTwoNumbers(string firstNumber, string secondNumber)
     {
